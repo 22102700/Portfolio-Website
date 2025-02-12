@@ -1995,6 +1995,8 @@ input, select, textarea {
 		border: solid 2px #e4e4e4;
 		margin-bottom: 2.25em;
 		padding: 1.5em;
+		cursor: pointer;
+        transition: all 0.3s ease;
 	}
 
 		.box > :last-child,
@@ -2002,7 +2004,16 @@ input, select, textarea {
 		.box > :last-child > :last-child > :last-child {
 			margin-bottom: 0;
 		}
-
+		.box:hover {
+			background-color: #f0f0f0;
+			transform: scale(1.05);
+		}
+	
+		/* Active touch effect */
+		.box:active {
+			background-color: #e0e0e0;
+			transform: scale(1);
+		}
 		.box.alt {
 			border: 0;
 			border-radius: 0;
@@ -3311,6 +3322,11 @@ input, select, textarea {
 			input[type="button"],
 			.button {
 				padding: 0;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
 			}
 
 	}
